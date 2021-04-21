@@ -57,7 +57,7 @@ const Layout: FC<Props> = ({
     modalView,
   } = useUI()
   const { acceptedCookies, onAcceptCookies } = useAcceptCookies()
-  const { locale = 'en-US' } = useRouter()
+  const { locale = 'hu' } = useRouter()
   return (
     <CommerceProvider locale={locale}>
       <div className={cn(s.root)}>

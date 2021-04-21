@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  dev:
+    image: node:14.5.0-alpine
+    working_dir: /usr/src/${PROJECT_NAME}
+    ports:
+      - 3000:3000
+    env_file:
+      - .env
+    volumes:
+      - /usr/src/${PROJECT_NAME}/node_modules
+      - /usr/src/${PROJECT_NAME}/.next
+      - .:/usr/src/${PROJECT_NAME}
+    entrypoint: tail -F /dev/null

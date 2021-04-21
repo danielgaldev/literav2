@@ -24,51 +24,15 @@ const Footer: FC<Props> = ({ className, pages }) => {
   return (
     <footer className={rootClassName}>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accents-2 py-12 text-primary bg-primary transition-colors duration-150">
-          <div className="col-span-1 lg:col-span-2">
-            <Link href="/">
-              <a className="flex flex-initial items-center font-bold md:mr-24">
-                <span className="rounded-full border border-gray-700 mr-2">
-                  <Logo />
-                </span>
-                <span>ACME</span>
-              </a>
-            </Link>
-          </div>
-          <div className="col-span-1 lg:col-span-2">
-            <ul className="flex flex-initial flex-col md:flex-1">
-              <li className="py-3 md:py-0 md:pb-4">
-                <Link href="/">
-                  <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
-                    Home
-                  </a>
-                </Link>
-              </li>
-              <li className="py-3 md:py-0 md:pb-4">
-                <Link href="/">
-                  <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
-                    Careers
-                  </a>
-                </Link>
-              </li>
-              <li className="py-3 md:py-0 md:pb-4">
-                <Link href="/blog">
-                  <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
-                    Blog
-                  </a>
-                </Link>
-              </li>
-              {sitePages.map((page) => (
-                <li key={page.url} className="py-3 md:py-0 md:pb-4">
-                  <Link href={page.url!}>
-                    <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
-                      {page.name}
-                    </a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="flex justify-between border-b border-accents-2 py-12 text-primary bg-primary transition-colors duration-150">
+          <Link href="/">
+            <a className="flex flex-initial items-center font-bold md:mr-24">
+              <span className="rounded-full border border-gray-700 mr-2">
+                <Logo />
+              </span>
+              <span>Litera</span>
+            </a>
+          </Link>
           <div className="col-span-1 lg:col-span-2">
             <ul className="flex flex-initial flex-col md:flex-1">
               {legalPages.map((page) => (
@@ -82,22 +46,11 @@ const Footer: FC<Props> = ({ className, pages }) => {
               ))}
             </ul>
           </div>
-          <div className="col-span-1 lg:col-span-6 flex items-start lg:justify-end text-primary">
-            <div className="flex space-x-6 items-center h-10">
-              <a
-                aria-label="Github Repository"
-                href="https://github.com/vercel/commerce"
-                className={s.link}
-              >
-                <Github />
-              </a>
-              <I18nWidget />
-            </div>
-          </div>
+          <I18nWidget />
         </div>
         <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4">
           <div>
-            <span>&copy; 2020 ACME, Inc. All rights reserved.</span>
+            <span>&copy; 2021 Litera. All rights reserved.</span>
           </div>
           <div className="flex items-center text-primary">
             <span className="text-primary">Crafted by</span>
@@ -109,10 +62,11 @@ const Footer: FC<Props> = ({ className, pages }) => {
               className="text-primary"
             >
               <Vercel
-                className="inline-block h-6 ml-4 text-primary"
+                className="inline-block h-6 mx-2 text-primary"
                 alt="Vercel.com Logo"
               />
             </a>
+            <span className="text-primary">& Daniel Gal</span>
           </div>
         </div>
       </Container>

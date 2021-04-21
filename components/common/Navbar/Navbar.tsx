@@ -10,23 +10,17 @@ const Navbar: FC = () => (
     <Container>
       <div className="relative flex flex-row justify-between py-4 align-center md:py-6">
         <div className="flex items-center flex-1">
-          <Link href="/">
-            <a className={s.logo} aria-label="Logo">
-              <Logo />
+          <Link href="/search">
+            <a className="flex">
+              <div className={s.logo} aria-label="Logo">
+                <Logo />
+              </div>
+              <h1 className="font-serif font-bold text-2xl ml-2">Litera</h1>
             </a>
           </Link>
           <nav className="hidden ml-6 space-x-4 lg:block">
             <Link href="/search">
               <a className={s.link}>All</a>
-            </Link>
-            <Link href="/search?q=clothes">
-              <a className={s.link}>Clothes</a>
-            </Link>
-            <Link href="/search?q=accessories">
-              <a className={s.link}>Accessories</a>
-            </Link>
-            <Link href="/search?q=shoes">
-              <a className={s.link}>Shoes</a>
             </Link>
           </nav>
         </div>
